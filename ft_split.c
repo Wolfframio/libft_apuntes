@@ -25,7 +25,6 @@
 	- Valor devuelto 
 	El array de nuevas strings resulatente de la separación.
 	NULL si falla la reserva de memoria.
-	"Hola que tal"
 */
 
 static	int	ft_strcount(const char *str, char sep)
@@ -50,28 +49,29 @@ static	int	ft_strcount(const char *str, char sep)
 }
 
 static	char	**ft_splitstrings(char **tab, const char *s, char c)
+//Recibe el array de strings, el string y el separador, separa los strings y los guarda en el array con su indice correspondiente
 {
 	int		i;
 	int		j;
 	int		k;
 
-	j = 0;
-	i = 0;
+	j = 0; //contador de tamaño de string. Luego hay que restar i para conocer el tamaño
+	i = 0; //indice
 	k = 0;
 	while (s[i])
 	{
-		while (s[i] == c)
+		while (s[i] == c)//avanza si encuentra separador
 			i++;
 		if (s[i])
 		{
-			j = i;
+			j = i;//iguala j a i para comenzar j con el indice actual
 			while (s[j] && s[j] != c)
-				j++;
-			tab[k++] = ft_substr(s, i, j - i);
-			i = j;
+				j++;//avanza j para contar tamaño del actual string
+			tab[k++] = ft_substr(s, i, j - i);//llama ft_substr para crear un substring y le pasa el string original, la posicion inicial del substring y su tamaño
+			i = j; //iniciamos i en la posicion actual de j para continuar buscando strings
 		}
 	}
-	tab[k] = NULL;
+	tab[k] = '\0'; //añadimos caracter nulo en el final del array de strings
 	return (tab);
 }
 
