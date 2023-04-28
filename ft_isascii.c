@@ -19,3 +19,9 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
+
+int main ()
+{
+	printf ("%i\n", ft_isascii('n'));
+	return (0);
+}

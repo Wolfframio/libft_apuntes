@@ -33,12 +33,12 @@ void	*ft_memset(void *ptr, int c, size_t n)
 	return (s);
 }
 
-/* int main() 
+int main() 
 {
     int a = 5;
 	
 	char *str = (char*)malloc(10 * sizeof(char));
-    ft_memset(str, -3, a);
+    ft_memset(str, 't', a);
 	
 	for (int i = 0; i < a; i++)
         printf("%c", str[i]);
@@ -59,7 +59,7 @@ void	*ft_memset(void *ptr, int c, size_t n)
 
 
 	char *str2 = (char*)malloc(10 * sizeof(char));
-    memset(str2, -3, a);
+    memset(str2, 't', a);
 	
 	for (int i = 0; i < a; i++)
         printf("%c", str2[i]);
@@ -77,4 +77,3 @@ void	*ft_memset(void *ptr, int c, size_t n)
 
     return 0;
 }
-*/

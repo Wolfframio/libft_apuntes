@@ -21,7 +21,19 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = 0;
 	while (s[i])
 	{
-		f(i, &s[i]);
+		f(i, &s[i]); //f espera un puntero a un char y le pasamos la direccion de memoria de esa posición del str
 		i++;
 	}
+}
+
+void print_char_index(unsigned int index, char* ch) {
+    printf("El caracter en la posicion %d es %c\n", index, *ch);
+}
+
+int main() {
+    char str[] = "vaaaaalgame primo";
+    
+    ft_striteri(str, &print_char_index);
+    
+    return 0;
 }
