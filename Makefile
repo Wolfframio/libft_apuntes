@@ -66,4 +66,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re #indica que los objetivos que contiene no son archivos y no tiene que buscarlos
