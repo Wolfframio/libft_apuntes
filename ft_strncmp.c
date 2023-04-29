@@ -28,7 +28,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
-	while ((str1[i] != '\0' || str2[i] != '\0') && (i < n))
+	while ((str1[i] != '\0' || str2[i] != '\0') && (i < n)) //El bucle continúa mientras el carácter actual de str1 o str2 no sea el carácter nulo y i sea menor que n.
 	{
 		if (str1[i] < str2[i])
 		{
@@ -42,3 +42,21 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+
+#include <stdio.h>
+#include <string.h>
+
+int ft_strncmp(const char *s1, const char *s2, size_t n);
+
+int main(void)
+{
+    char str1[] = "Hello, world!";
+    char str2[] = "a ";
+    int n = 3;
+
+    printf("Comparando '%s' y '%s' hasta %d caracteres: \n", str1, str2, n);
+    printf("ft_strncmp: %d\n", ft_strncmp(str1, str2, n));
+    printf("strncmp: %d\n", strncmp(str1, str2, n));
+    return (0);
+}
+

@@ -25,8 +25,8 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	str = (char *)s;
 	while (str[i] != '\0')
-		i++;
-	while (i >= 0)
+		i++; // = strlen(str), tamaño de str
+	while (i >= 0) //recorre de atrás hacia delante
 	{
 		if (str[i] == (unsigned char)c)
 			return (&str[i]);

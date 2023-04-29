@@ -34,7 +34,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (ptr);
 }
 
-/*
 char	ft_mierder(unsigned int i, char c)
 {
 	i = 32;
@@ -46,7 +45,7 @@ int	main(void)
 	char	*src;
 	char	*dest;
 
-	src = "La mierda la sole";
+	src = "la mierda la sole";
 	dest = ft_strmapi(src, ft_mierder);
 	printf("%s\n", src);
 	printf("%s\n", dest);
@@ -54,4 +53,4 @@ int	main(void)
 	return (0);
 	free(dest);
 }
-*/
+

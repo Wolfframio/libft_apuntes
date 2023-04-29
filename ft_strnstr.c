@@ -36,18 +36,23 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	{
 		return ((char *)haystack);
 	}
-	while (haystack[i] && i < len)
+	while (haystack[i] && i < len) //recorre haystack mientras no se haya llegado al final de la cadena y no se haya superado el límite de búsqueda len.
 	{
 		j = 0;
-		while (haystack[i + j] == needle[j] && i + j < len)
+		while (haystack[i + j] == needle[j] && i + j < len) 
 		{
-			if (needle[j + 1] == '\0')
+			if (needle[j + 1] == '\0') 
 			{
-				return ((char *)haystack + i);
+				return ((char *)haystack + i); // igual que poner: return (&((char *)haystack)[i]);
 			}
 			j++;
 		}
 		i++;
 	}
+	/*
+		Se empieza recorriendo H. Si no encuentra N, aumenta i. 
+		Si encuentra N, aumenta j para avanzar juntos los indices de H y N hasta llegar al \0 de N.
+			i se queda como primera posición cuando encuentra N en H y devuelve puntero a esa posición
+	*/
 	return (NULL);
 }

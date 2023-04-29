@@ -13,14 +13,16 @@
 #include "libft.h"
 
 /*
-	toma el tamaño de dst como parámetro y 
-	no escribirá más de esa cantidad de bytes para evitar 
-	el desbordamiento del búfer (suponiendo que el tamaño sea correcto).
-	Además, siempre escribe un solo byte ‘\0’ en el destino 
-	(si el tamaño no es cero). 
-	Se garantiza que la cadena resultante terminará en ‘\0’ 
-	incluso si se trunca. Además, no pierde el tiempo 
-	escribiendo múltiples bytes ‘\0’ para llenar el resto del búfer.
+	copia una cadena de origen en una cadena de destino, 
+	y se utiliza para evitar problemas de desbordamiento de búfer al copiar cadenas. 
+	
+	La función toma tres argumentos:
+	- dest: un puntero a una cadena de caracteres de destino.
+	- src: un puntero a una cadena de caracteres de origen.
+	- dstsize: un número entero que indica la cantidad de caracteres que pueden ser escritos
+		en la cadena de destino, incluyendo el carácter nulo.
+	La función devuelve el tamaño de la cadena de origen que se pretendía 
+	copiar (la longitud de la cadena de origen).
 */
 
 size_t	ft_strlcpy(char	*dest, const char *src, size_t dstsize)
@@ -32,9 +34,9 @@ size_t	ft_strlcpy(char	*dest, const char *src, size_t dstsize)
 	i2 = 0;
 	while (src[i2])
 		i2++;
-	if (dstsize < 1)
+	if (dstsize < 1) //Si el tamaño de la cadena de destino es menor que 1 (si no se puede escribir nada en la cadena de destino), devuelve la longitud de la cadena de origen.
 		return (i2);
-	while (src[i] && i < dstsize - 1)
+	while (src[i] && i < dstsize - 1) //Si la longitud de la cadena de origen es mayor o igual que dstsize, sólo se copian los primeros dstsize - 1 caracteres de la cadena de origen en la cadena de destino, y se agrega un carácter nulo al final de la cadena de destino.
 	{
 		dest[i] = src[i];
 		i++;

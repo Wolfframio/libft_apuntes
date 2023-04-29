@@ -31,12 +31,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	while (s1[i])
 	{
-		new[i] = s1[i];
+		new[i] = s1[i]; //primero copia s1 en new
 		i++;
 	}
 	while (s2[j])
 	{
-		new[i] = s2[j];
+		new[i] = s2[j]; //cuando el contador i llega al final de s1 sigue copiando s2 con el contador j a 0
 		i++;
 		j++;
 	}
