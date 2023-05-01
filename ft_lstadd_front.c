@@ -54,7 +54,7 @@ int main(void)
     t_list  *list; 
     t_list  *node1, *node2, *node3;
 
-    //list = NULL; //hemos declarado e iniciado una lista vacia
+    list = NULL; //hemos declarado e iniciado una lista vacia
 
     node1 = ft_lstnew("Montoya");//creamos tambien 3 nodos con estos contenidos con la funcion ft_lstnew
     node2 = ft_lstnew("Yoyas"); 
@@ -72,7 +72,9 @@ int main(void)
 	ft_lstadd_front(&list, node2); 
     ft_lstadd_front(&list, node3);
 
-    t_list *current;
+    printf("El tamaño de la lista es %i\n", ft_lstsize(list));
+
+	t_list *current;
 	
 	current = list;
     while (current != NULL)
