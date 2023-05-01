@@ -49,13 +49,17 @@ SRCS		= ft_memset.c \
 
 				
 OBJS		= $(SRCS:%.c=%.o)
+#El resultado es una lista de archivos objeto que tienen los mismos nombres que los archivos fuente pero con la extensión .o. (cambia .c por .o)
 
 FLAGS		= -Wall -Wextra -Werror
 
 $(NAME):
 	gcc $(FLAGS) -c $(SRCS)
-	ar rc $(NAME) $(OBJS)
-
+# -c crear archivos objeto .o
+	ar rc $(NAME) $(OBJS) 
+#crear un archivo de biblioteca a partir de una lista de archivos objeto. 
+# r indica que se debe agregar archivos al archivo de biblioteca (en lugar de reemplazarlo)
+# c indica que se debe crear un nuevo archivo de biblioteca si aún no existe.
 all: $(NAME)
 
 clean:
@@ -66,4 +70,5 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re #indica que los objetivos que contiene no son archivos y no tiene que buscarlos
+.PHONY: all clean fclean re 
+#indica que los objetivos que contiene no son archivos y no tiene que buscarlos

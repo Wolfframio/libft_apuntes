@@ -14,10 +14,12 @@
 
 /*
 	compara dos bloques de memoria para determinar si son iguales o no
+	
 	La función toma tres argumentos:
-	un puntero al primer bloque de memoria a comparar (s1),
-	un puntero al segundo bloque de memoria a comparar (s2),
-	y el número de bytes a comparar (n).
+	- un puntero al primer bloque de memoria a comparar (s1),
+	- un puntero al segundo bloque de memoria a comparar (s2),
+	- y el número de bytes a comparar (n).
+	
 	Devuelve un entero que indica la relación entre los dos bloques de memoria.
 	- Si los bloques son iguales:
 		devuelve cero. 

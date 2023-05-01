@@ -18,6 +18,12 @@
 # include <string.h>
 # include <stdio.h>
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
 /*	MEMORY	*/
 
 void	*ft_memset(void *ptr, int x, size_t n);
@@ -64,5 +70,10 @@ char	**ft_split(char const *s, char c);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char	*dest, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+
+/*	LISTS	*/
+
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
