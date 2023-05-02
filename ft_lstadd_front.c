@@ -49,7 +49,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 				//para decirle que apunte al nuevo nodo, que es el primero de la lista
 }
 
-int main(void)
+/*int main(void)
 {
     t_list  *list; 
     t_list  *node1, *node2, *node3;
@@ -60,14 +60,14 @@ int main(void)
     node2 = ft_lstnew("Yoyas"); 
     node3 = ft_lstnew("Aberroncho"); 
 
-    ft_lstadd_front(&list, node1); 	/* enviamos la direccion de list (NULL) y la direccion del nuevo nodo/node1
-									la funcion va a:
-									1ero. Pasar el contenido del puntero list (NULL) al campo/miembro next del node1
-									2o.  Cambiar el contenido del puntero list por la direccón del nuevo nodo.
+    ft_lstadd_front(&list, node1); 	//enviamos la direccion de list (NULL) y la direccion del nuevo nodo/node1
+									//la funcion va a:
+									//1ero. Pasar el contenido del puntero list (NULL) al campo/miembro next del node1
+									//2o.  Cambiar el contenido del puntero list por la direccón del nuevo nodo.
 
-									Es decir, el nuevo nodo siempre va a apuntar al siguiente nodo y va a ser apuntado
-									por list. Así se convierte en el primer nodo.
-									*/
+									//Es decir, el nuevo nodo siempre va a apuntar al siguiente nodo y va a ser apuntado
+									//por list. Así se convierte en el primer nodo.
+									
 
 	ft_lstadd_front(&list, node2); 
     ft_lstadd_front(&list, node3);
@@ -93,4 +93,4 @@ int main(void)
     	current = next;
 	}
     return (0);
-}
+}*/

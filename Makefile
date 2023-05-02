@@ -6,7 +6,7 @@
 #    By: imontero <imontero@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/19 19:35:16 by imontero          #+#    #+#              #
-#    Updated: 2023/04/19 19:35:16 by imontero         ###   ########.fr        #
+#    Updated: 2023/05/02 13:37:27 by imontero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,19 @@ SRCS		= ft_memset.c \
 OBJS		= $(SRCS:%.c=%.o)
 #El resultado es una lista de archivos objeto que tienen los mismos nombres que los archivos fuente pero con la extensión .o. (cambia .c por .o)
 
+SRC_BONUS = \
+			ft_lstnew.c	\
+			ft_lstadd_front.c	\
+			ft_lstsize.c	\
+			ft_lstlast.c	\
+			ft_lstadd_back.c	\
+			ft_lstdelone.c	\
+			ft_lstclear.c	\
+			ft_lstiter.c	\
+			ft_lstmap.c
+
+OBJS_BONUS = $(SRC_BONUS:%.c=%.o)
+
 FLAGS		= -Wall -Wextra -Werror
 
 $(NAME):
@@ -69,6 +82,10 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+bonus:
+	gcc $(FLAGS) -c $(SRC_BONUS)
+	ar rc $(NAME) $(OBJS_BONUS)
 
 .PHONY: all clean fclean re 
 #indica que los objetivos que contiene no son archivos y no tiene que buscarlos
