@@ -6,7 +6,7 @@
 #    By: imontero <imontero@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/19 19:35:16 by imontero          #+#    #+#              #
-#    Updated: 2023/05/02 13:37:27 by imontero         ###   ########.fr        #
+#    Updated: 2023/05/02 13:42:17 by imontero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,7 +76,7 @@ $(NAME):
 all: $(NAME)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 	rm -f $(NAME)
