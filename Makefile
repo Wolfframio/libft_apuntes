@@ -6,7 +6,7 @@
 #    By: imontero <imontero@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/19 19:35:16 by imontero          #+#    #+#              #
-#    Updated: 2023/05/02 13:42:17 by imontero         ###   ########.fr        #
+#    Updated: 2023/05/03 16:52:58 by imontero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,5 +87,5 @@ bonus:
 	gcc $(FLAGS) -c $(SRC_BONUS)
 	ar rc $(NAME) $(OBJS_BONUS)
 
-.PHONY: all clean fclean re 
+.PHONY: all clean fclean re bonus
 #indica que los objetivos que contiene no son archivos y no tiene que buscarlos

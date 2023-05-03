@@ -6,7 +6,7 @@
 /*   By: imontero <imontero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 10:31:17 by imontero          #+#    #+#             */
-/*   Updated: 2023/05/02 10:51:05 by imontero         ###   ########.fr       */
+/*   Updated: 2023/05/03 15:05:57 by imontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 
 	if (!lst)
 		return ;
-	while(*lst) //mientras el nodo exista
+	while(*lst->next) //mientras el nodo exista
 	{
 		temp = (*lst)->next; //almacenamos el puntero al siguiente nodo en una variable temporal
 		ft_lstdelone((*lst), del); //ft_lstdelone aplica del al contenido del nodo
